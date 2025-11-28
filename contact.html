@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Professional Team Showcase</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="index.html">
+   <link rel="stylesheet" href="about.html">
+   <link rel="stylesheet" href="contact.html">
+   <link rel="stylesheet" href="exxonmobil.html">
+ 
+  <style>
+    /* Navbar Animations & Styles */
+    .navbar {
+      width: 100%;
+      background: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      animation: slideDown 0.7s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .navbar-logo {
+      font-size: 22px;
+      font-weight: 600;
+      color: black;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .navbar-logo:hover {
+      color: #0066ff;
+      transform: scale(1.05);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+    }
+
+    .nav-links a {
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 8px;
+      position: relative;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(0, 102, 255, 0.1);
+      color: #0066ff;
+      box-shadow: 0 4px 10px rgba(0, 102, 255, 0.3);
+      transform: translateY(-3px);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background-color: #0066ff;
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .top-space {
+      height: 90px;
+    }
+
+    /* Team card styling */
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 38px rgba(0, 120, 255, 0.22);
+    }
+    .icon-hover:hover {
+      transform: scale(1.15);
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-900">
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="navbar-logo">HCL Tech</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="exxonmobil.html">Project</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- Space for fixed navbar -->
+  <div class="top-space"></div>
+
+  <!-- HEADER SECTION -->
+  <header class="w-full py-14 bg-gradient-to-r from-blue-50 to-blue-100 text-center shadow-sm">
+    <h1 class="text-4xl font-bold mb-2">Meet Our Team</h1>
+  </header>
+
+  <!-- TEAM CARDS SECTION -->
+  <section class="max-w-7xl mx-auto py-16 px-6 grid md:grid-cols-3 gap-10">
+
+    <!-- PERSON 1 -->
+    <div class="bg-white p-8 rounded-2xl shadow card-hover text-center border border-slate-100">
+      <img src="sumit.jpg" width="100px" height="100px" class="w-32 h-32 rounded-full mx-auto mb-4 shadow" />
+      <h2 class="text-2xl font-bold">Person One</h2>
+      <p class="text-blue-600 text-sm font-semibold">Sumit</p>
+      
+
+      <div class="flex justify-center gap-5 mt-6">
+        <a href="https://github.com/sumitsorout" class="icon-hover transition"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" class="w-7"></a>
+        <a href="https://github.com/sumitsorout" class="icon-hover transition"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111425.png" class="w-7"></a>
+      </div>
+    </div>
+
+    <!-- PERSON 2 -->
+    <div class="bg-white p-8 rounded-2xl shadow card-hover text-center border border-slate-100">
+      <img src="nishu.jpg" width="100px" height="100px" class="w-32 h-32 rounded-full mx-auto mb-4 shadow" />
+      <h2 class="text-2xl font-bold">Person Two</h2>
+      <p class="text-blue-600 text-sm font-semibold">Nishu</p>
+     
+
+      <div class="flex justify-center gap-5 mt-6">
+        <a href="https://github.com/nishu7078122-alt" class="icon-hover transition"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" class="w-7"></a>
+        <a href="https://github.com/nishu7078122-alt" class="icon-hover transition"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111425.png" class="w-7"></a>
+      </div>
+    </div>
+
+    <!-- PERSON 3 -->
+    <div class="bg-white p-8 rounded-2xl shadow card-hover text-center border border-slate-100">
+      <img src="savita.jpg" width="100px" height="100px" class="w-32 h-32 rounded-full mx-auto mb-4 shadow" />
+      <h2 class="text-2xl font-bold">Person Three</h2>
+      <p class="text-blue-600 text-sm font-semibold">Savita</p>
+      
+
+      <div class="flex justify-center gap-5 mt-6">
+        <a href="#" class="icon-hover transition"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" class="w-7"></a>
+        <a href="#" class="icon-hover transition"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111425.png" class="w-7"></a>
+      </div>
+    </div>
+
+    <!-- PERSON 4 -->
+    <div class="bg-white p-8 rounded-2xl shadow card-hover text-center border border-slate-100">
+      <img src="shrangika.jpg" class="w-32 h-32 rounded-full mx-auto mb-4 shadow" />
+      <h2 class="text-2xl font-bold">Person Four</h2>
+      <p class="text-blue-600 text-sm font-semibold">Shrangika</p>
+      
+      <div class="flex justify-center gap-5 mt-6">
+        <a href="#" class="icon-hover transition"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" class="w-7"></a>
+        <a href="#" class="icon-hover transition"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111425.png" class="w-7"></a>
+      </div>
+    </div>
+
+    <!-- PERSON 5 -->
+    <div class="bg-white p-8 rounded-2xl shadow card-hover text-center border border-slate-100">
+      <img src="divyansh1.jpeg" class="w-32 h-32 rounded-full mx-auto mb-4 shadow" />
+      <h2 class="text-2xl font-bold">Person Five</h2>
+      <p class="text-blue-600 text-sm font-semibold">Divyansh</p>
+      
+
+      <div class="flex justify-center gap-5 mt-6">
+        <a href="#" class="icon-hover transition"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" class="w-7"></a>
+        <a href="#" class="icon-hover transition"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111425.png" class="w-7"></a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="w-full py-8 bg-blue-50 text-center text-slate-600 text-sm">
+    © 2025 ExxonMobil × HCL Tech — Contact Team Page
+  </footer>
+
+</body>
+</html>

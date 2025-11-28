@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCL Tech Case Study</title>
+   <link rel="stylesheet" href="index.html">
+   <link rel="stylesheet" href="about.html">
+   <link rel="stylesheet" href="contact.html">
+   <link rel="stylesheet" href="exxonmobil.html">
+ 
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: white;
+        }
+
+        /* ================= NAVBAR ================= */
+        .navbar {
+            width: 100%;
+            background: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+
+            /* slide-down animation */
+            animation: slideDown 0.7s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-40px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Branding */
+        .navbar-logo {
+            font-size: 22px;
+            font-weight: 600;
+            color: black;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .navbar-logo:hover {
+            color: #005eff;
+            transform: scale(1.05);
+        }
+
+        /* Nav Links */
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 8px;
+            position: relative;
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Hover Background Glow */
+        .nav-links a:hover {
+            background: rgba(0, 102, 255, 0.1);
+            color: #005eff;
+            box-shadow: 0 4px 10px rgba(0, 102, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Underline animation */
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background-color: #005eff;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Space because navbar is fixed */
+        .top-space {
+            height: 90px;
+        }
+
+        /* ================= HEADER ================= */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .header h1 {
+            font-size: 38px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        /* ================= SLIDER ================= */
+        .slider {
+            position: relative;
+            width: 900px;
+            max-width: 90%;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .slides img {
+            width: 100%;
+            display: none;
+            border-radius: 15px;
+        }
+
+        .slides img.active {
+            display: block;
+            animation: fade 1s;
+        }
+
+        @keyframes fade {
+            from { opacity: 0.3; }
+            to { opacity: 1; }
+        }
+
+        /* Arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 40px;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 8px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .arrow:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        #prev { left: 15px; }
+        #next { right: 15px; }
+
+        /* ================= CARDS ================= */
+        .card-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+        }
+
+        .card {
+            width: 300px;
+            padding: 20px;
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            animation: popUp 0.7s ease;
+        }
+
+        @keyframes popUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .nishu {
+            margin-left: 110px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="navbar-logo">HCL Tech</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="exxonmobil.html">Project</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="top-space"></div>
+
+    <div class="header">
+        <h1>HCL Tech – Case Study Overview</h1>
+    </div>
+
+    <!-- Slider -->
+    <div class="slider">
+        <span class="arrow" id="prev">&#10094;</span>
+        <span class="arrow" id="next">&#10095;</span>
+
+        <div class="slides">
+            <img src="hcl10.jpg" class="active">
+            <img src="hcl11.jpg">
+            <img src="hcl12.jpg">
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card-container">
+        <div class="card">
+            <img src="hcl5.png">
+            <h3>Cafeteria</h3>
+            <p>HCL Cafeteria provides a refreshing space where employees can relax, recharge, and enjoy delicious meals.</p>
+            <div class="nishu">
+                <button style="background: blue; padding: 10px 15px; border: none; border-radius: 6px;">
+                    <a href="#" style="color: white; text-decoration: none;">Click Here</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="hcl6.jpg">
+            <h3>Sports Area</h3>
+            <p>HCL offers world-class sports facilities that encourage fitness and a healthy lifestyle.</p>
+            <div class="nishu">
+                <button style="background: blue; padding: 10px 15px; border: none; border-radius: 6px;">
+                    <a href="#" style="color: white; text-decoration: none;">Click Here</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="hcl7.png">
+            <h3>Brand Store</h3>
+            <p>The HCL Brand Store offers exclusive merchandise for employees and visitors.</p>
+            <div class="nishu">
+                <button style="background: blue; padding: 10px 15px; border: none; border-radius: 6px;">
+                    <a href="#" style="color: white; text-decoration: none;">Click Here</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider Script -->
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll(".slides img");
+
+        function showSlide(n) {
+            slides.forEach(img => img.classList.remove("active"));
+            slides[n].classList.add("active");
+        }
+
+        function nextSlide() {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        }
+
+        function prevSlide() {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+        }
+
+        document.getElementById("next").onclick = nextSlide;
+        document.getElementById("prev").onclick = prevSlide;
+
+        setInterval(nextSlide, 3000);
+    </script>
+
+</body>
+</html>

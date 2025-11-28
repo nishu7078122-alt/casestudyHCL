@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExxonMobil × HCL Tech — Professional Project Page</title>
+  <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="about.html">
+    <link rel="stylesheet" href="contact.html">
+    <link rel="stylesheet" href="exxonmobil.html">
+ 
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* ---------- NAVBAR STYLES ---------- */
+    .navbar {
+      width: 100%;
+      background: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      animation: slideDown 0.7s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .navbar-logo {
+      font-size: 22px;
+      font-weight: 600;
+      color: black;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .navbar-logo:hover {
+      color: #0066ff;
+      transform: scale(1.05);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+    }
+
+    .nav-links a {
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 8px;
+      position: relative;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(0, 102, 255, 0.1);
+      color: #0066ff;
+      box-shadow: 0 4px 10px rgba(0, 102, 255, 0.3);
+      transform: translateY(-3px);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background-color: #0066ff;
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .top-space {
+      height: 90px;
+    }
+
+    /* ---------- CARD HOVER ---------- */
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0, 101, 255, 0.15);
+    }
+
+    .btn-hover:hover {
+      background-color: #3b82f6 !important;
+      box-shadow: 0 8px 20px rgba(59,130,246,0.35);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800">
+
+  <!-- ================= NAVBAR ================= -->
+  <div class="navbar">
+    <div class="navbar-logo">HCL Tech</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="exxonmobil.html">Project</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- Space for navbar -->
+  <div class="top-space"></div>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="w-full bg-gradient-to-r from-blue-50 to-blue-100 py-16 px-6 text-center">
+    <h1 class="text-4xl font-bold text-slate-900 mb-3">ExxonMobil × HCL Technologies</h1>
+    <p class="text-lg max-w-2xl mx-auto text-slate-600">
+      Professional Overview of the Joint Digital Transformation Project
+    </p>
+  </section>
+
+  <!-- ================= EXPERIENCE CARDS ================= -->
+  <section class="max-w-7xl mx-auto py-16 px-6 grid md:grid-cols-3 gap-8">
+    <div class="bg-white rounded-xl shadow card-hover p-6 transition cursor-pointer">
+      <h3 class="text-xl font-semibold mb-2 text-blue-600">Project Overview</h3>
+      <p class="text-slate-600 text-sm">
+        High-impact collaboration focused on modernization, cloud migration, automation & operational excellence.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow card-hover p-6 transition cursor-pointer">
+      <h3 class="text-xl font-semibold mb-2 text-blue-600">Technology Expertise</h3>
+      <p class="text-slate-600 text-sm">
+        Advanced engineering, cloud architecture, analytics, and cybersecurity to enhance performance.
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl shadow card-hover p-6 transition cursor-pointer">
+      <h3 class="text-xl font-semibold mb-2 text-blue-600">Our Contribution</h3>
+      <p class="text-slate-600 text-sm">
+        Automation workflows, dashboards, pipelines & performance engineering driving measurable outcomes.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= DETAILED CARDS ================= -->
+  <section class="max-w-7xl mx-auto px-6 pb-20 grid md:grid-cols-2 gap-10">
+
+    <div class="bg-white p-8 rounded-xl shadow card-hover transition">
+      <h2 class="text-2xl font-bold mb-4 text-blue-700">Why This Collaboration?</h2>
+      <p class="text-slate-600 leading-relaxed">
+        ExxonMobil partnered with HCL Tech to accelerate digital modernization, reduce downtime, modernize legacy systems, and build cloud-native platforms powered by analytics and automation.
+      </p>
+      
+    </div>
+
+    <div class="bg-white p-8 rounded-xl shadow card-hover transition">
+      <h2 class="text-2xl font-bold mb-4 text-blue-700">Key Areas of Work</h2>
+      <ul class="text-slate-600 space-y-2 text-sm">
+        <li>✔ Cloud Migration & Modernization</li>
+        <li>✔ Predictive AI/ML Analytics</li>
+        <li>✔ End-to-End Automation</li>
+        <li>✔ Security & Compliance Engineering</li>
+        <li>✔ Dashboarding & Real-time Data Ops</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="w-full py-6 bg-blue-50 text-center text-slate-600 text-sm">
+    © ExxonMobil × HCL Tech — Professional Collaboration Page
+  </footer>
+
+</body>
+</html>

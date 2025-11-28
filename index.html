@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HCLTech Case Study</title>
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="about.html">
+    <link rel="stylesheet" href="exxonmobil.html">
+    <link rel="stylesheet" href="contact.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f6eded00;
+            color: #1b1a1a;
+            overflow-x: hidden;
+        }
+
+        /* --------- TRANSPARENT NAVBAR --------- */
+        .navbar {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 18px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            z-index: 999;
+        }
+
+        .navbar .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #100f0f;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #232020;
+            padding: 8px 14px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #007bff;
+        }
+
+        /* ---------- HERO SECTION LIKE SAMPLE UI --------- */
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background: url('HCL-logo.jpg');
+            background-blend-mode: lighten;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        .cta-btn {
+            margin-top: 35px;
+            padding: 14px 35px;
+            border: 2px solid white;
+            border-radius: 30px;
+            background: transparent;
+            color: rgb(9, 9, 9);
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #007bff;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">HCLTech</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="exxonmobil.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>WELCOME TO HCLTECH</h1>
+            <p>Empowering digital transformation with innovation, technology, and a future-ready approach.</p>
+            <button class="cta-btn">Explore More</button>
+        </div>
+    </section>
+
+</body>
+</html>
